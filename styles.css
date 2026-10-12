@@ -1,4 +1,10 @@
 /* css styles */
 .navbar-dark, .quarto-title-banner {
-  background-color: #006DAE;
+  background-color: #7a2e0e;
+}
+
+.finding {
+  border-left: 8px solid #b5451b;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
 }
