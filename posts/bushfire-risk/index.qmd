@@ -76,14 +76,14 @@ ggplot(risk, aes(times, driver, fill = focus)) +
   )
 ```
 
-**What this tells us about the problem.** Back to the question: was Black Summer just bad luck? Not entirely. The heat and fire weather part of it was made more likely by human-caused warming. The drought part was mostly down to natural patterns in the Indian and Pacific oceans, so the dry conditions were not a climate change effect.
+**What this tells us about the problem.** Back to the question: was Black Summer just bad luck? Not entirely. The heat and fire weather part of it was made more likely by human-caused warming. The drought part was mostly down to natural climate patterns, such as the Indian Ocean Dipole and the Southern Annular Mode (a shift in the wind belt around Antarctica), so the study found no climate change signal in the drought.
 
 **What this doesn't tell us.** These numbers are minimums. The climate models tend to underestimate how much extreme heat has increased, so the real change is probably larger. The study also covers weather, not damage. How much a fire destroys depends on other things too, like where we build and how well we prepare.
 
 ## Conclusion: what it means for you
 
-The question was whether Black Summer was just bad luck. The research says no. Hotter, drier-feeling conditions that lead to dangerous fire weather are now at least twice as likely to occur as they were in the early 1900s, and the drought was the only ingredient that wasn't linked to climate change.
+The question was whether Black Summer was just bad luck. The research says not entirely. Extreme heat is now at least twice as likely as it was in the early 1900s, and dangerous fire weather is at least 30% more likely, with the real figures probably higher. Drought was the one ingredient that wasn't linked to climate change.
 
-For readers, the practical takeaway is that fire seasons like 2019/20 should be treated as a real and growing risk, not a one-off. That is worth knowing if you live in a fire-prone area, or if you are making decisions about where to buy, build or insure. The researchers' own results are the best place to read more [@vanoldenborgh2021].
+For readers, the practical takeaway is that fire seasons like 2019/20 should be treated as a real and growing risk, not a one-off. That is worth knowing if you live in a fire-prone area, or if you are making decisions about where to buy, build or insure. To read the full results, see the original study [@vanoldenborgh2021].
 
 ## References
