@@ -1,0 +1,89 @@
+---
+title: "Did climate change make Australia's Black Summer fires more likely?"
+author: "Shravani"
+date: "2026-10-12"
+categories: [climate, bushfires, Australia]
+bibliography: references.bib
+execute:
+  echo: false
+  warning: false
+---
+
+## The problem: was Black Summer just bad luck?
+
+In the summer of 2019/20, bushfires burned more than 19 million hectares of Australia, killed 34 people directly and destroyed nearly 5,900 buildings. Afterwards, a lot of people asked the same question: was this just a terrible run of weather, or did climate change play a part?
+
+It matters because the answer changes what we should expect next. If it was bad luck, another season like it is rare. If climate change made it more likely, seasons like it will keep getting more common.
+
+This post explains what one group of researchers found [@vanoldenborgh2021].
+
+::: {.finding}
+**The short version:** climate change made the extreme heat and fire weather behind Black Summer clearly more likely. It did not make the drought more likely.
+:::
+
+## Analysis: what the evidence shows
+
+**Where the evidence comes from.** The researchers did not run a new experiment. They used 40 years of detailed weather records, temperature and rainfall measurements going back to 1900, and 11 sets of climate model simulations. They asked how likely a season this extreme is today, compared with a world without human-caused warming.
+
+**What they found.** Think of loaded dice. Climate change doesn't roll the dice for a particular fire, but it makes the bad rolls come up more often. @tbl-summary sets out the results for each ingredient of a bad fire season.
+
+| What was measured | How much more likely than in the early 1900s | How sure are they? |
+|:------------------|:---------------------------------------------|:-------------------|
+| Extreme heat | At least 2 times | Very sure |
+| Fire weather index (heat, dryness and wind combined) | At least 1.3 times in the models, 4 times or more in the observations | Sure, and probably an underestimate |
+| Monthly severity rating | About 2 times in the models, 9 times or more in the observations | Same direction, less certain |
+| Drought | No clear change | Not linked to climate change |
+
+: What climate change did to the odds of each fire ingredient {#tbl-summary}
+
+@fig-risk shows the same results as a chart. Heat stands out, and drought is the one measure that sits on the "no change" line.
+
+```{r}
+#| label: fig-risk
+#| fig-cap: "Heat is the clearest signal. Drought shows no change. Bars show the minimum increase in likelihood, from the model results in @vanoldenborgh2021."
+#| fig-height: 3.5
+library(ggplot2)
+
+risk <- data.frame(
+  driver = c("Extreme heat", "Fire weather index",
+             "Monthly severity rating", "Drought"),
+  times  = c(2, 1.3, 2, 1),
+  label  = c("2x or more", "1.3x or more", "2x", "No change"),
+  focus  = c("Focus", "Context", "Context", "Context")
+)
+risk$driver <- factor(risk$driver, levels = rev(risk$driver))
+
+ggplot(risk, aes(times, driver, fill = focus)) +
+  geom_col(width = 0.6) +
+  geom_vline(xintercept = 1, linetype = "dashed") +
+  geom_text(aes(label = label), hjust = -0.1, size = 4) +
+  scale_fill_manual(
+    values = c("Focus" = "#b5451b", "Context" = "#B8B8B8"),
+    guide = "none"
+  ) +
+  scale_x_continuous(limits = c(0, 2.6), breaks = c(1, 2),
+                     labels = c("Same as\nearly 1900s", "Twice as\nlikely")) +
+  labs(
+    title = "Climate change made extreme heat at least twice as likely",
+    x = NULL, y = NULL
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title.position = "plot",
+    panel.grid.minor = element_blank(),
+    panel.grid.major.y = element_blank(),
+    plot.title = element_text(face = "bold")
+  )
+```
+
+**What this tells us about the problem.** Back to the question: was Black Summer just bad luck? Not entirely. The heat and fire weather part of it was made more likely by human-caused warming. The drought part was mostly down to natural climate patterns, such as the Indian Ocean Dipole and the Southern Annular Mode (a shift in the wind belt around Antarctica), so the study found no climate change signal in the drought.
+
+**What this doesn't tell us.** These numbers are minimums. The climate models tend to underestimate how much extreme heat has increased, so the real change is probably larger. The study also covers weather, not damage. How much a fire destroys depends on other things too, like where we build and how well we prepare.
+
+## Conclusion: what it means for you
+
+The question was whether Black Summer was just bad luck. The research says not entirely. Extreme heat is now at least twice as likely as it was in the early 1900s, and dangerous fire weather is at least 30% more likely, with the real figures probably higher. Drought was the one ingredient that wasn't linked to climate change.
+
+For readers, the practical takeaway is that fire seasons like 2019/20 should be treated as a real and growing risk, not a one-off. That is worth knowing if you live in a fire-prone area, or if you are making decisions about where to buy, build or insure. To read the full results, see the original study [@vanoldenborgh2021].
+
+## References

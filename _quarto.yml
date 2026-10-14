@@ -1,17 +1,18 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "blog-template"
+  title: "Shravani's Data Blog"
   navbar:
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/etc5523-2022
+        href: https://github.com/sjad0015-git
+
 format:
   html:
-    theme: cosmo
+    theme:
+      - cosmo
+      - custom.scss
     css: styles.css
-
-
-
